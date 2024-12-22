@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>{{ greeting }}</h1>
+    {% if user.is_authenticated %}
+        <button onclick="location.href='{% url 'logout' %}'">Logout</button>
+    {% else %}
+        <button onclick="location.href='{% url 'login' %}'">Login</button>
+        <button onclick="location.href='{% url 'register' %}'">Register</button>
+    {% endif %}
+</body>
+</html>
